@@ -1,0 +1,138 @@
+
+:root {
+  --color-principal: #003366;   
+  --color-secundario: #08f0f4; 
+  --color-fondo: #f8f9fa;       
+  --color-texto: #333333;       
+  --color-titulos: #cc0000;     
+}
+
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--color-titulos);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  color: var(--color-principal);
+  border-bottom: 2px solid var(--color-secundario);
+  padding-bottom: 5px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: var(--color-principal);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.menu {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.presentacion {
+  text-align: center;
+  padding: 30px;
+  background-color: #eef5fc;
+}
+
+.informacion {
+  font-size: 0.95rem;
+  color: #555555;
+}
+
+
+.tarjeta.destacado {
+  background-color: #fff9e6; 
+  border: 2px solid #ffcc00; 
+}
+
+
+#logo {
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+#destinos {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+#copyright {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+
+
+a:hover {
+  color: var(--color-titulos);
+  text-decoration: underline;
+}
+
+
+.menu li:first-child {
+  font-weight: bold;
+}
+
+
+h1::before {
+  content: "◈ ";
+  color: var(--color-secundario);
+}
+
+
+.menu li a {
+  color: var(--color-principal);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+
+.menu li a {
+  color: var(--color-principal);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+
+section article p {
+  text-align: justify;
+}
+
+
+footer p {
+  margin: 5px 0;
+}
+
+
+p:not(.informacion):last-child {
+  margin-bottom: 0;
+}
