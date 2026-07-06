@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0f111a;
+    color: #ffffff;
+}
+
+.header-principal {
+    background-color: #1a0808; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   
+    padding: 20px;
+    margin: 0px 0px 15px 0px;
+    border-bottom: 4px solid #d12424; 
+    
+   
+    height: 30vh; 
+}
+
+.menu-navegacion {
+    background-color: #081220; 
+    text-align: center;
+  
+    padding: 15px;
+    margin: 0px 0px 20px 0px;
+}
+
+.menu-navegacion a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px 15px; 
+}
+
+
+.contenedor-principal {
+    width: 85%; 
+    margin: 0px auto; 
+    padding: 10px;
+}
+
+.tarjetas-seccion {
+    width: 100%;
+    margin: 30px 0px;
+}
+
+
+.tarjeta-spider {
+    background-color: #161925;
+    
+    
+    border: 2px solid #4da6ff; 
+    padding: 25px;
+    margin: 0px 0px 20px 0px; 
+}
+
+
+.pie-pagina {
+    background-color: #0b0c10;
+    text-align: center;
+    color: #888888;
+    
+    /* Box Model aplicado */
+    padding: 20px;
+    margin: 40px 0px 0px 0px;
+    border-top: 1px solid #333333;
+}
+
+
+
+
+.header-principal h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.header-principal p {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #e51b24;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.btn-mas {
+    background-color: #e51b24;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    
+    width: 25vw; 
+}
+
+
+.foto-tarjeta {
+    width: 40%;              
+    aspect-ratio: 2 / 0;     
+    object-fit: cover;       
+    display: block;          
+    margin: 0px auto 15px auto; 
+    border: 3px solid #ff0000;  
+}
