@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea bootstrap - Participacion 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <span class="navbar-brand">Taller de Desarrollo videojuegil</span>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Registrarme</button>
+        </div>
+    </nav>
+
+    
+    <main class="container">
+
+        
+        <div class="row mt-4">
+            
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <h5 class="card-title text-primary">Taller de videojuegos</h5>
+                        <p class="card-text">Atreve a aprender a crear juegos desde cero, que tu imaginacion te inspiren a crear el posble juego de tus sueños</p>
+                       
+                        <button class="btn btn-primary">Te interesa? Da click Aqui</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                       
+                        <h5 class="card-title text-success">Taller de Diseño 3D</h5>
+                        <p class="card-text">APrende de la manera mas facil de aprender a renderizar y hasta incluso personalizar tus propios modelos</p>
+                    
+                        <button class="btn btn-success">Te interesa? Da click Aqui</button>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <h5 class="card-title text-danger">Taller de JavaScript</h5>
+                        <p class="card-text">Para aprender a hacer videojuegos con JavaScript entra aqui y te enseñamos de manera clara y bien explicada a saber utilizar JavaScript para tus futuros videojuegos y hasta incluso proyectos mas avanzados si ya sabes como usarlo</p>
+                        
+                        <button class="btn btn-danger">Te interesa? Da click Aqui</button>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <h5 class="card-title text-warning">Taller para principiante de Unity</h5>
+                        <p class="card-text">Es el motor más popular del mundo, especialmente para desarrolladores independientes (indies) y juegos móviles. Es extremadamente versátil y sirve tanto para 2D como para 3D</p>
+                       
+                        <button class="btn btn-warning">Te interesa? Da click Aqui</button>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                      
+                        <h5 class="card-title text-info">Taller básico de Unreal Engine</h5>
+                        <p class="card-text">Es el rey de los gráficos fotorrealistas y los juegos de gran presupuesto (AAA). Es una herramienta pesada pero increíblemente potente para proyectos en 3D.</p>
+                        
+                        <button class="btn btn-secondary">Te interesa? Da click Aqui</button>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Taller de Renderizar</h5>
+                        <p class="card-text">Aprende las técnicas fundamentales para crear imágenes y escenas 3D realistas como personajes o entornos en 3D</p>
+                        <button class="btn btn-dark">Te interesa? Da click Aqui</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+
+
+        
+        <div class="mt-5">
+            <h3>Formulario de Registro</h3>
+            <form>
+                
+                <div class="mb-3">
+                    <label class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Institución o empresa</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Taller de interés</label>
+                    <select class="form-select">
+                        <option>Selecciona un taller...</option>
+                        <option>Taller básico de Unreal Engine</option>
+                        <option>Backend con Node</option>
+                        <option>Frontend con React</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Comentarios</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+    </main> <
+
+
+    
+    <div class="modal fade" id="miModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tech Conect 2026</h5>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Fecha:</strong> 25 de Junio de 2026</p>
+                    <p><strong>Lugar:</strong> Campus ITES</p>
+                    <p>¡Bienvenido al evento! Regístrate en el formulario abajo para asegurar tu lugar.</p>
+                </div>
+                <div lass="modal-footer">
+                    
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
