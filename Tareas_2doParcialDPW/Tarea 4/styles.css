@@ -1,0 +1,300 @@
+/* ==========================================
+   RESET Y MODELO DE CAJA (Box Model)
+   ======================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables CSS obligatorias mediante :root */
+:root {
+    --color-principal: #006847;    /* Verde Bandera */
+    --color-secundario: #CE1126;   /* Rojo Bandera */
+    --color-fondo: #f4f6f8;        /* Gris muy claro */
+    --color-texto: #333333;        /* Gris oscuro para lectura */
+    --color-titulos: #111111;      /* Casi negro */
+    --color-blanco: #ffffff;
+    --borde-suave: #d1d5db;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   HEADER (Uso de Flexbox para componentes internos)
+   =================================== */
+#main-header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 5px solid var(--color-secundario);
+}
+
+/* Selector descendiente */
+#main-header .logo-text {
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--color-blanco);
+    text-transform: uppercase;
+}
+
+.header-date {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Pseudoclase 1: :hover */
+.nav-menu a:hover {
+    color: #fde047; /* Amarillo oro al pasar el mouse */
+}
+
+/* ====================================
+   CUADRÍCULA PRINCIPAL (CSS Grid Estructural)
+   ========================================== */
+/* Esta cuadrícula divide el espacio mayor entre las noticias y la barra lateral */
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 3fr) minmax(250px, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* NOTICIA PRINCIPAL */
+.main-article {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--borde-suave);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+/* Cajas que simulan dónde irían las imágenes reales */
+.placeholder-img {
+    background-color: #e5e7eb;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #6b7280;
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-article .placeholder-img {
+    height: 350px; /* La noticia principal tiene una imagen más alta */
+    background-color: #bbf7d0;
+    color: var(--color-principal);
+    font-size: 1.2rem;
+}
+
+.article-body {
+    padding: 1.5rem;
+}
+
+.article-body h2 {
+    color: var(--color-titulos);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.btn-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* =====================================
+   NOTICIAS SECUNDARIAS (CSS Grid - 6 elementos)
+   ========================================== */
+/* Esta cuadrícula organiza las 6 noticias secundarias en filas automáticas usando repeat, fr y minmax */
+.secondary-news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.news-card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--borde-suave);
+    border-radius: 6px;
+    padding: 1rem; /* Demostración de Box Model */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card h3 {
+    color: var(--color-titulos);
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.news-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.news-card a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ==================================
+   BARRA LATERAL (Sidebar)
+   ========================================== */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-block {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--borde-suave);
+    border-radius: 6px;
+    padding: 1.25rem;
+}
+
+.sidebar-block h3 {
+    color: var(--color-titulos);
+    border-bottom: 3px solid var(--color-principal);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-list {
+    list-style: none;
+}
+
+/* Selector descendiente combinado */
+.sidebar-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--borde-suave);
+}
+
+/* Pseudoclase 2: :last-child */
+.sidebar-list li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-list a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar-list a:hover {
+    color: var(--color-secundario);
+}
+
+.ad-box {
+    background-color: #fee2e2;
+    border: 2px dashed var(--color-secundario);
+    padding: 2rem;
+    text-align: center;
+    font-style: italic;
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+/* ===================================
+   SECCIÓN SEPARADA: DESTACADAS (CSS Grid independiente)
+   ========================================== */
+.featured-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.featured-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-titulos);
+    border-left: 5px solid var(--color-principal);
+    padding-left: 10px;
+}
+
+/* Cuadrícula para colocar 4 elementos exactamente usando repeat y fr */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.featured-card {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+/* Pseudoclase 3 y Grid Column: Modificamos la primera tarjeta para que se expanda 2 lugares */
+.featured-card:first-child {
+    grid-column: span 2; 
+    background-color: var(--color-secundario);
+}
+
+.featured-card a {
+    color: var(--color-blanco);
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+/* ================================
+   PIE DE PÁGINA (Footer)
+   =================================== */
+#main-footer {
+    background-color: var(--color-titulos);
+    color: var(--color-blanco);
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 4rem;
+    border-top: 5px solid var(--color-principal);
+}
+
+.footer-social a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-social a:hover {
+    color: var(--color-secundario);
+}
