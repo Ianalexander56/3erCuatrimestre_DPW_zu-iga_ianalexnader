@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Digital de xbox</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS mio -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR (Barra de navegación) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">XBOX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Productos">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#registro">Apartar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contactanos</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <!-- 2. BANNER PRINCIPAL (HERO) -->
+    <header id="inicio" class="text-white text-center py-5">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">¿Quieres una consola o videojuego?</h1>
+            <p class="lead">Somos xbox y tenemos consolas, videjuegos y accesorios originales para ti, explora nuestro gran catalogo y elige el que quieras</p>
+            <a href="#juegos" class="btn btn-success btn-lg mt-3">Ver Productos...</a>
+        </div>
+    </header>
+
+    <!-- 3. CATÁLOGO DE CONTENIDO (6 tarjetas) -->
+    <section id="Productos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Catologo de productos XBOX</h2>
+            <div class="row g-4">
+                
+                <!-- tarjeta 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card my-card">
+                        <img src="fotosXboxPagina/XboxSeriesX.webp" class="card-img-top" alt="Xbox Series X">
+                        <div class="card-body">
+                            <h5 class="card-title">ConsolaXbox Series X</h5>
+                            <p class="card-text">Cononce la xbox series x, una consola con una potenica superior a la antigua generacion de consola, capacitad de renderizar en 4K y 120 FPS los videjuegos, para disfrutar de la mejor experiencia jugando nuestros videjuegos y con una mejor calidad de imagen y resolucion para, Fortnite, GTA V etc...</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tarjeta 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card my-card">
+                        <img src="fotosXboxPagina/XboxSeriesS.webp" class="card-img-top" alt="Xbox Series S">
+                        <div class="card-body">
+                            <h5 class="card-title">Consola Xbox Series S</h5>
+                            <p class="card-text">Consola 100% digital, compacta, la xbox series es una de nuestras versiones "pequeñas" y economica, pero si perjudicar nada en la jugabilidad, contanto con renderizado en 4K y 120 FPS para todos los juegos pero con una capacidad de memoria de 512 GB de memoria, exelente y economica para nuestros usuarios.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tarjeta 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-card">
+                     <img src="fotosXboxPagina/controldexbox.webp" class="card-img-top" alt="Control Xbox">
+                    <div class="card-body">
+                         <h5 class="card-title">Controles de xbox</h5>
+                        <p class="card-text">Visita nuestra gran variedad de controles originales para tu futura consola, entra aqui y elige cuando digas "este esta padre"</p>
+                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Ver detalles</button>
+                      </div>
+                </div>
+                </div>
+
+                <!-- tarjeta 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-card">
+                    <img src="fotosXboxPagina/xboxverdeedicion.webp" class="card-img-top" alt="Xbox 25 Aniversario (Verde clasico)">
+                    <div class="card-body">
+                        <h5 class="card-title">Xbox 25 Aniversario (Verde clasico) </h5>
+                        <p class="card-text">CELEBRA NUESTRO 25 ANIVERSARIO CON LA EDICION ESPECIAL DE LA CONSOLA XBOX 25 ANIVERSARIO (VERDE CLASICO), edicion limitada lista para salir en noviembre de este año, con un diseño unico y lleno de nostalgia para nuestros clientes mas fieles</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Ver detalles</button>
+                    </div>
+                </div>
+                </div>
+
+                <!-- tarjeta 5 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-card">
+                    <img src="fotosXboxPagina/controlSeriesAzul.avif" class="card-img-top" alt="Mando Elite">
+                    <div class="card-body">
+                        <h5 class="card-title">Control elite series 2</h5>
+                        <p class="card-text">Nuestro mando personalizable, profesional para jugadores que les gusta competir o que simplemente quieren una experiencia de juego superior, con este control podras jugar a tu manera y personalizar a tu comodidad y a tu gusto</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Ver detalles</button>
+                    </div>
+                </div>
+                </div>
+
+                <!-- tarjeta 6 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-card">
+                <img src="fotosXboxPagina/gamepass.jpg " class="card-img-top" alt="Game Pass">
+                <div class="card-body">
+                    <h5 class="card-title">GAME PASS EN OFERTA!!</h5>
+                    <p class="card-text">Unete a game pass ahora que tenemos una gran oferta, paga 147 pesos durante 12 meses game pass ultimate, con más de 250 juegos incluidos, servicion online, EA+ y mucho mas, no desaproveches esta oportunidad!!!</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Ver detalles</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 4. FORMULARIO DE REGISTRO y APARTADO -->
+    <section id="registro" class="py-5">
+    <div class="container">
+    <h2 class="text-center mb-4 fw-bold text-white">Aparta tu producto</h2>
+        <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+                <form class="p-4 border rounded bg-white">
+                 <div class="mb-3">
+                       <label for="nombre" class="form-label">Nombre completo:</label>
+                     <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                 <div class="mb-3">
+                      <label for="correo" class="form-label">Correo electrónico:</label>
+                       <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+                 </div>
+                <div class="mb-3">
+                    <label for="producto" class="form-label">Selecciona el producto:</label>
+                     <select class="form-select" id="producto">
+                        <option>Xbox Series X</option>
+                        <option>Xbox Series S</option>
+                        <option>Mandos Inalámbricos</option>
+                        <option>(Precompra) Xbox25 aniversario</option>
+                        <option>Controles ELITE</option>
+                        <option>Game Pass</option>
+                </select>
+                </div>
+            <button type="submit" class="btn btn-success w-100 fw-bold">Enviar pedido</button>
+        </form>
+        </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- MODAL (OBLIGATORIO) -->
+    <div class="modal fade" id="miModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">DETALLES DEL PRODUCTO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Estos productos cuentan con garantía de 1 año directo con Microsoft y envío gratis a domicilio, y si tiene alguna queja o desea algun cambio favor de contactarnos</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+             </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- 5. PIE DE PÁGINA (FOOTER) -->
+    <footer id="contacto" class="bg-white text-grey pt-4 pb-3">
+    <div class="container">
+        <div class="row">
+             <div class="col-12 col-md-4 mb-3">
+                  <h5>Tienda Xbox</h5>
+                <p class="text-muted">nos ubicamos aqui a la vuelta</p>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                 <h5>Contacto</h5>
+                <p class="text-muted mb-1"> Av. EsquinaDelcallejonAzul</p>
+                <p class="text-muted"> 981 222 3333</p>
+             </div>
+            <div class="col-12 col-md-4 mb-3">
+                 <h5>Redes Sociales</h5>
+                <ul class="list-unstyled">
+                     <li><a href="#" class="text-muted text-decoration-none">Facebook</a></li>
+                     <li><a href="#" class="text-muted text-decoration-none">Instagram</a></li>
+                </ul>
+            </div>
+         </div>
+        <hr class="border-secondary">
+        <p class="text-center text-muted mb-0">Tarea 5 - Diseño de pagina web</p>
+        <p class="text-center text-muted">Ian Alexander Zuñiga Leyva</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

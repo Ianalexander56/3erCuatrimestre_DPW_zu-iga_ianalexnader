@@ -1,0 +1,41 @@
+/* Mis variables CSS en :root */
+:root {
+  --color-verde-xbox: #107c41;
+  --color-verde-hover: #69ef03;
+  --color-oscuro: #1a1a1a;
+  --color-gris-fondo: #777778;
+  --fuente-principal: Arial, sans-serif;
+}
+
+/* Estilos generales */
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-verde-xbox);
+  color: var(--color-oscuro);
+}
+
+/* Cambiar color por defecto del boton success de Bootstrap a verde Xbox */
+.btn-success {
+  background-color: var(--color-verde-xbox);
+  border-color: var(--color-verde-xbox);
+}
+
+.btn-success:hover {
+  background-color: var(--color-verde-hover);
+  border-color: var(--color-verde-hover);
+}
+
+/* Fijar tamaño de las imagenes de las tarjetas */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Efecto hover personalizado en las tarjetas */
+.my-card {
+  transition: transform 0.2s ease;
+}
+
+.my-card:hover {
+  transform: scale(1.03); /* Hace un pequeño zoom a la tarjeta al pasar el mouse */
+}
