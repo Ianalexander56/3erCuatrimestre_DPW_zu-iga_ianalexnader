@@ -1,0 +1,15 @@
+.card-body a.btn-primary,
+    .card-body button.btn-primary,
+    .modal-footer button.btn-primary {
+      background-color: #6f42c1; /* Color Púrpura personalizado */
+      border-color: #593196;
+      color: #ffffff;
+    }
+
+    /* Cambio de estado :hover y :focus manteniendo la especificidad */
+    .card-body a.btn-primary:hover,
+    .card-body button.btn-primary:hover,
+    .modal-footer button.btn-primary:hover {
+      background-color: #593196;
+      border-color: #432473;
+    }

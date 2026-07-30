@@ -1,0 +1,94 @@
+ /* 1. VARIABLES CSS (:root) */
+    :root {
+      /* Variables de color */
+      --color-primario: #2b6cb0;
+      --color-fondo: #f7fafc;
+      --color-tarjeta: #ffffff;
+      --color-texto-principal: #2d3748;
+      --color-texto-secundario: #718096;
+      --color-borde: #e2e8f0;
+
+      /* Variable de fuente base */
+      --fuente-base: 1rem; /* Esto es el por defecto de 16px */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: var(--fuente-base);
+      background-color: var(--color-fondo);
+      color: var(--color-texto-principal);
+      padding: 2rem 1rem;
+    }
+
+    /* 2. Estructura principal css grid y mobile firts */
+    .grid-contenedor {
+      display: grid;
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+
+      /* a. (mobile first): 1 sola columna */
+      grid-template-columns: 1fr;
+    }
+
+    /* b. (≥ 768px): 2 columnas asimétricas */
+    @media (min-width: 768px) {
+      .grid-contenedor {
+        /*  la primera columna toma 1 parte y la segunda toma 2 partes */
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+
+    /* c. (≥ 1200px): 3 columnas iguales */
+    @media (min-width: 1200px) {
+      .grid-contenedor {
+        /* Tres columnas del mismo tamaño usando repeat() */
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* 3. Contenido interno de flexbox */
+    .card-usuario {
+      background-color: var(--color-tarjeta);
+      border: 1px solid var(--color-borde);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      /* esto es para alinear avatar (izquierda) y texto (derecha) */
+      display: flex;
+      flex-direction: row;        /* Eje principal horizontal */
+      align-items: center;        /* Alineación vertical al centro */
+      justify-content: flex-start; /* Contenido alineado al inicio horizontal */
+      gap: 1rem;                  /* Espacio entre la imagen y los textos */
+    }
+
+    .card-usuario img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0; /* Esto hace que la imagen no se haga pequeña */
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .card-info h3 {
+      font-size: 1.1rem;
+      color: var(--color-primario);
+    }
+
+    .card-info p {
+      font-size: 0.875rem;
+      color: var(--color-texto-secundario);
+    }
